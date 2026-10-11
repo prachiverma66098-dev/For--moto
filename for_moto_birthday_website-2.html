@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe6ef">
+<title>For Moto ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--pink:#f7a8c4;--deep:#b84e78;--pale:#fff5f8;--ink:#653b4b;--cream:#fffaf7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--pale);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.23;background-image:radial-gradient(#e9a0bc .8px,transparent .8px);background-size:18px 18px;z-index:-1}
+button{font:inherit;cursor:pointer}
+.hero{min-height:94svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:55px 20px 70px;position:relative;background:radial-gradient(ellipse at 50% 20%,#fff 0,#fff1f6 48%,#ffe1eb 100%);overflow:hidden}
+.hero-inner{max-width:650px;position:relative;z-index:2}
+.eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;color:var(--deep);font-weight:700}
+h1,h2{font-family:'Playfair Display',serif;font-weight:500}
+h1{font-size:clamp(3.2rem,12vw,6.2rem);line-height:.98;margin:22px 0 18px;color:#a83f6a}
+h1 em{font-weight:500;color:#e681a6}
+.subtitle{font-size:1rem;line-height:1.8;max-width:430px;margin:0 auto 28px;color:#80586a}
+.bow{font-size:3rem;display:inline-block;animation:bob 3s ease-in-out infinite;filter:drop-shadow(0 6px 5px #eaa4bd55)}
+.pill{border:1px solid #e9a0bc;background:#fff9fb;color:#a83f6a;border-radius:999px;padding:14px 23px;box-shadow:0 8px 24px #d77b9b24;transition:.2s}
+.pill:hover{transform:translateY(-2px);background:#fff}
+.heart{position:absolute;opacity:.65;animation:float 7s ease-in-out infinite;font-size:clamp(18px,4vw,30px)}
+.heart:nth-child(1){left:8%;top:18%}.heart:nth-child(2){right:10%;top:22%;animation-delay:1.3s}.heart:nth-child(3){left:15%;bottom:18%;animation-delay:2s}.heart:nth-child(4){right:14%;bottom:15%;animation-delay:3s}
+section{padding:76px 20px}
+.wrap{max-width:850px;margin:auto}
+.section-tag{text-align:center;color:var(--deep);letter-spacing:.17em;text-transform:uppercase;font-size:.68rem;font-weight:700}
+h2{text-align:center;font-size:clamp(2.2rem,7vw,3.5rem);margin:12px 0 14px;color:#a83f6a}
+.lead{text-align:center;max-width:570px;line-height:1.8;margin:0 auto 34px;color:#80586a}
+.note{background:#fffdfc;border:1px solid #f3cada;border-radius:22px;padding:clamp(23px,5vw,42px);box-shadow:0 14px 45px #b74e7810;position:relative}
+.note:before{content:"♡";position:absolute;top:-19px;left:24px;background:#ffe3ed;color:#bd5b82;border-radius:50%;width:40px;height:40px;display:grid;place-items:center;font-size:1.3rem}
+.letter{font-family:'Playfair Display',serif;font-size:1.08rem;line-height:1.95;white-space:pre-line}
+.letter strong{color:#a83f6a}
+.sign{font-family:'Playfair Display',serif;font-style:italic;text-align:right;color:#a83f6a;font-size:1.3rem;margin-top:18px}
+.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.polaroid{background:#fff;padding:11px 11px 17px;box-shadow:0 10px 24px #9f496a17;transform:rotate(var(--tilt));transition:transform .25s}
+.polaroid:hover{transform:rotate(0) translateY(-5px)}
+.photo{aspect-ratio:4/5;background:linear-gradient(145deg,#ffe9f0,#f9c8d9);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;color:#a64b70;border:1px dashed #e59ab7}
+.photo span{font-size:2rem}.photo small{font-size:.7rem;line-height:1.5;margin-top:9px}
+.caption{text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;padding-top:12px}
+.tiny{font-size:.76rem;text-align:center;color:#a26e82;margin-top:18px}
+.silly{background:#ffe8f0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.card{background:#fffafa;border:1px solid #f3cada;border-radius:18px;padding:22px 17px;text-align:center;min-height:155px}
+.card .emoji{font-size:1.8rem}.card h3{font-size:.95rem;margin:10px 0 7px;color:#a83f6a}.card p{font-size:.84rem;line-height:1.65;margin:0;color:#80586a}
+.surprise{text-align:center;background:linear-gradient(160deg,#fff0f5,#ffe0eb)}
+.hidden-message{display:none;max-width:620px;margin:26px auto 0;background:#fffdfc;border:1px solid #efbfd0;border-radius:22px;padding:28px;line-height:1.9;animation:appear .5s ease}
+.hidden-message.show{display:block}
+.footer{text-align:center;padding:32px 18px 45px;color:#a26e82;font-size:.8rem}
+.footer .big{font-size:1.7rem;display:block;margin-bottom:10px}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-18px) rotate(8deg)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-8px) rotate(3deg)}}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){section{padding:60px 18px}.memory-grid{grid-template-columns:repeat(2,1fr);gap:12px}.memory-grid .polaroid:last-child{display:none}.cards{grid-template-columns:1fr}.card{min-height:0}.hero{min-height:88svh}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <span class="heart">♡</span><span class="heart">🎀</span><span class="heart">✧</span><span class="heart">♡</span>
+  <div class="hero-inner">
+    <div class="bow">୨୧</div>
+    <div class="eyebrow">a little birthday page made with love</div>
+    <h1>Happy Birthday,<br><em>Moto!</em></h1>
+    <p class="subtitle">For Komal Verma — my built-in best friend, favourite headache, and forever person. ♡</p>
+    <button class="pill" onclick="document.querySelector('#letter').scrollIntoView({behavior:'smooth'})">A little letter for you ↓</button>
+    <p style="font-family:'Playfair Display',serif;font-style:italic;color:#b96a88;margin-top:27px">made by your little sister, with all my heart</p>
+  </div>
+</header>
+
+<section id="letter">
+ <div class="wrap">
+  <div class="section-tag">from my heart ♡</div>
+  <h2>To my Moto</h2>
+  <p class="lead">Some people get a best friend. I got lucky enough to be born with mine.</p>
+  <div class="note">
+   <div class="letter">Dear Moto, ♡
+
+Happy Birthday to the person who is so much more than a sister to me. You are my comfort person, my partner in nonsense, my personal source of drama, and one of the biggest blessings in my life.
+
+Life gave me an elder sister, but somehow I also got a best friend who knows me in ways nobody else can. Thank you for being part of my every version — the sensible one, the dramatic one, the annoying one, and the one who laughs at absolutely nothing.
+
+I hope this year brings you the kind of happiness you give to the people around you. I hope you get a thousand reasons to smile, dreams that come true, and all the love your heart can hold.
+
+And just so you know, no matter how grown-up we get, you will always have me. For the serious talks, the silly gossip, the random laughing fits, and the days when everything feels a little too much. You don't ever have to do life alone.
+
+<strong>I love you more than I can fit into one little website.</strong> (And yes, making this website officially makes me the favourite sister. No arguments accepted. 😌)
+
+Happy birthday, my Moto. Stay happy, stay magical, and please stay a little less annoying. Actually, don't — I love you exactly as you are. 🎀</div>
+   <div class="sign">Forever your little sister ♡</div>
+  </div>
+ </div>
+</section>
+
+<section style="background:#fff0f5">
+ <div class="wrap">
+  <div class="section-tag">our tiny universe 📸</div>
+  <h2>Little moments, big love</h2>
+  <p class="lead">These little frames are waiting for your favourite pictures together. We'll add your real photos whenever you're ready!</p>
+  <div class="memory-grid">
+   <div class="polaroid" style="--tilt:-3deg"><div class="photo"><span>♡</span><small>add a favourite<br>photo together</small></div><div class="caption">my forever person</div></div>
+   <div class="polaroid" style="--tilt:2deg"><div class="photo"><span>🎀</span><small>add a funny<br>memory here</small></div><div class="caption">partners in crime</div></div>
+   <div class="polaroid" style="--tilt:-2deg"><div class="photo"><span>✧</span><small>add a childhood<br>picture here</small></div><div class="caption">since day one</div></div>
+  </div>
+  <p class="tiny">♡ photo spaces are placeholders — no photos have been uploaded yet ♡</p>
+ </div>
+</section>
+
+<section class="silly">
+ <div class="wrap">
+  <div class="section-tag">official sister facts ✧</div>
+  <h2>Reasons you're my favourite</h2>
+  <p class="lead">A completely unbiased list, obviously.</p>
+  <div class="cards">
+   <div class="card"><div class="emoji">🫶</div><h3>Built-in bestie</h3><p>Because no friendship could ever replace the bond we have.</p></div>
+   <div class="card"><div class="emoji">😂</div><h3>Professional nuisance</h3><p>You annoy me like it's a full-time job. And somehow I still choose you.</p></div>
+   <div class="card"><div class="emoji">🏡</div><h3>My safe place</h3><p>Whatever happens out there, you're one of the people who will always feel like home.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="surprise">
+ <div class="wrap">
+  <div class="bow">💌</div>
+  <div class="section-tag">psst... one last thing</div>
+  <h2>There's a little surprise</h2>
+  <p class="lead">Moto, tap below. And don't pretend you aren't curious. 👀</p>
+  <button class="pill" id="surpriseBtn" onclick="openSurprise()">Open your surprise ♡</button>
+  <div class="hidden-message" id="secret">
+   <div style="font-size:2.2rem">🎀 💗 🎂 💗 🎀</div>
+   <h2 style="font-size:2rem">A wish just for you</h2>
+   May you always feel loved, celebrated, and proud of the person you're becoming. May life be gentle with you, may your dreams find their way to you, and may we always have a million little memories to look back on and laugh about.<br><br>
+   <strong>Happy Birthday, Komal!</strong><br>My sister by birth, my best friend by choice, my Moto forever. ♡
+   <p style="font-size:1.5rem;margin-bottom:0">୨୧ ♡ ୨୧</p>
+  </div>
+ </div>
+</section>
+<footer class="footer"><span class="big">୨୧</span>made with an unreasonable amount of love for Moto ♡<br><span style="display:block;margin-top:8px">from your little sister, always and forever</span></footer>
+<script>
+function openSurprise(){
+ const box=document.getElementById('secret');
+ box.classList.toggle('show');
+ document.getElementById('surpriseBtn').textContent=box.classList.contains('show')?'Close my little surprise ♡':'Open your surprise ♡';
+ if(box.classList.contains('show')) box.scrollIntoView({behavior:'smooth',block:'center'});
+ for(let i=0;i<14;i++){
+  const h=document.createElement('span');h.textContent=['♡','💗','✧','🎀'][Math.floor(Math.random()*4)];
+  h.style.cssText='position:fixed;left:'+Math.random()*100+'vw;top:80vh;z-index:20;pointer-events:none;font-size:'+(18+Math.random()*18)+'px;transition:transform 2.2s ease,opacity 2.2s ease;opacity:1';
+  document.body.appendChild(h);
+  requestAnimationFrame(()=>{h.style.transform='translateY(-75vh) rotate('+(Math.random()*100-50)+'deg)';h.style.opacity='0'});
+  setTimeout(()=>h.remove(),2400);
+ }
+}
+</script>
+</body>
+</html>
